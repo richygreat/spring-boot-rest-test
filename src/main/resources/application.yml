@@ -11,6 +11,10 @@ spring.cloud:
     output:
       contentType: application/*+avro
       destination: sensor-topic
+    dlt-input:
+      contentType: application/*+avro
+      destination: sensor-dead-letter-topic
+      group: backup
   schema.avro.schema-locations: classpath:avro/sensor.avsc
   schema-registry-client.endpoint: http://localhost:8990
 feign:
