@@ -1,4 +1,18 @@
 spring.application.name: test-service
+spring.cloud:
+  gcp:
+    project-id: architecture-292816
+    credentials.location: file:C:/Richy/architecture-292816-84dc85aa4796.json
+  stream.bindings:
+    input:
+      contentType: application/*+avro
+      destination: sensor-topic
+      group: spring-boot-rest-test
+    output:
+      contentType: application/*+avro
+      destination: sensor-topic
+  schema.avro.schema-locations: classpath:avro/sensor.avsc
+  schema-registry-client.endpoint: http://localhost:8990
 feign:
   test:
     name: test

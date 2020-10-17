@@ -1,0 +1,11 @@
+{
+  "namespace": "com.richygreat.event",
+  "type": "record",
+  "name": "Sensor",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    }
+  ]
+}
